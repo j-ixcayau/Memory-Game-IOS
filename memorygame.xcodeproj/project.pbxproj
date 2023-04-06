@@ -11,6 +11,9 @@
 		75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BA629DE63C600B3C221 /* ContentView.swift */; };
 		75C45BA929DE63C700B3C221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C45BA829DE63C700B3C221 /* Assets.xcassets */; };
 		75C45BAD29DE63C700B3C221 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C45BAC29DE63C700B3C221 /* Preview Assets.xcassets */; };
+		75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */; };
+		75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */; };
+		75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BC329DE894700B3C221 /* MemoryCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		75C45BA829DE63C700B3C221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C45BAA29DE63C700B3C221 /* memorygame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = memorygame.entitlements; sourceTree = "<group>"; };
 		75C45BAC29DE63C700B3C221 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGamePage.swift; sourceTree = "<group>"; };
+		75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		75C45BC329DE894700B3C221 /* MemoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,9 @@
 		75C45BA329DE63C600B3C221 /* memorygame */ = {
 			isa = PBXGroup;
 			children = (
+				75C45BB529DE6B5400B3C221 /* domain */,
+				75C45BB429DE6B4D00B3C221 /* data */,
+				75C45BB329DE6B4000B3C221 /* presentation */,
 				75C45BA429DE63C600B3C221 /* memorygameApp.swift */,
 				75C45BA629DE63C600B3C221 /* ContentView.swift */,
 				75C45BA829DE63C700B3C221 /* Assets.xcassets */,
@@ -67,6 +76,86 @@
 				75C45BAC29DE63C700B3C221 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75C45BB329DE6B4000B3C221 /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BB629DE6B5E00B3C221 /* features */,
+				75C45BB829DE6B8100B3C221 /* widgets */,
+				75C45BB729DE6B6700B3C221 /* utils */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
+		75C45BB429DE6B4D00B3C221 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		75C45BB529DE6B5400B3C221 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		75C45BB629DE6B5E00B3C221 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BB929DE6B9800B3C221 /* memory_game */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		75C45BB729DE6B6700B3C221 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		75C45BB829DE6B8100B3C221 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		75C45BB929DE6B9800B3C221 /* memory_game */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BBC29DE6C8800B3C221 /* bloc */,
+				75C45BBB29DE6C8200B3C221 /* ui */,
+				75C45BC129DE891800B3C221 /* widgets */,
+			);
+			path = memory_game;
+			sourceTree = "<group>";
+		};
+		75C45BBB29DE6C8200B3C221 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		75C45BBC29DE6C8800B3C221 /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
+		75C45BC129DE891800B3C221 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				75C45BC329DE894700B3C221 /* MemoryCard.swift */,
+			);
+			path = widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
 				75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */,
+				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
+				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = memorygame/memorygame.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"memorygame/Preview Content\"";
@@ -269,6 +362,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Memory Game";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -277,8 +372,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -300,6 +394,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = memorygame/memorygame.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"memorygame/Preview Content\"";
@@ -307,6 +402,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Memory Game";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -315,8 +412,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
