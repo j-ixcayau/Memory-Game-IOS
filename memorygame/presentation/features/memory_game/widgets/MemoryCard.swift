@@ -32,14 +32,11 @@ struct MemoryCard: View {
                 lineWidth: 4
             )
         )
-        .rotation3DEffect(.degrees(flipped ? 0: 180), axis: (x: 0, y: 1, z: 0))
+        .rotation3DEffect(.degrees(flipped ? 0: 180), axis: (x: 1, y: 1, z: 0))
         .onTapGesture {
             withAnimation(.spring()){
                 flipped.toggle()
-                //                opacity+=1
             }
-            //            try await Task.sleep(nanoseconds: UInt64(1.5 * Double(NSEC_PER_SEC)))
-            //
         }
         .padding()
     }
