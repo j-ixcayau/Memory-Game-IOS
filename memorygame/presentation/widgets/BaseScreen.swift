@@ -13,9 +13,11 @@ struct BaseScreen<Content> : View where Content : View {
     
     var body: some View {
         NavigationStack{
-            VStack(
-                content: child
-            )
+            ScrollView{
+                VStack(
+                    content: child
+                )
+            }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
             .background(Color("BackgroundColor"))
