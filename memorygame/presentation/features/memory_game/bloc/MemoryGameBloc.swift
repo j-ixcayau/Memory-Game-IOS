@@ -9,11 +9,11 @@ import Foundation
 
 class MemoryGameBloc: ObservableObject {
     
+    let wordsManager = WordsManager()
+    var isGuessing: Bool  = false
+    
     @Published var words = [GuessWord]()
     @Published var difficultyLevel: DifficultyLevel
-    
-    let wordsManager = WordsManager()
-    
     @Published var previousIndex: Int? = nil
     
     init(difficultyLevel: DifficultyLevel){
@@ -28,34 +28,38 @@ class MemoryGameBloc: ObservableObject {
     
     func onCardTap(index: Int) {
         let guessWord = words[index]
-        if (guessWord.isGuessed || guessWord.isGuessing || guessWord.isFlipped){
+        if (guessWord.isGuessed || guessWord.isGuessing || guessWord.isFlipped || isGuessing){
             return
         }
         
         guessWord.startGuessing()
         self.objectWillChange.send()
         
-        if previousIndex == nil {
-            previousIndex = index
-            return
-        }
-        
-        let currentWord = words[index].word
-        let previousWord = words[previousIndex!].word
-        
-        if currentWord == previousWord {
-            words[previousIndex!].markAsGuessed()
-            words[index].markAsGuessed()
-            previousIndex = nil
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-                self.words[self.previousIndex!].resetValues()
-                self.words[index].resetValues()
-                
+        if let previousIndex = previousIndex {
+            isGuessing = true
+            
+            let currentWord = words[index].word
+            let previousWord = words[previousIndex].word
+            
+            if currentWord == previousWord {
+                words[previousIndex].markAsGuessed()
+                words[index].markAsGuessed()
                 self.previousIndex = nil
+                isGuessing = false
                 
-                self.objectWillChange.send()
+                objectWillChange.send()
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                    self.words[previousIndex].resetValues()
+                    self.words[index].resetValues()
+                    self.previousIndex = nil
+                    self.isGuessing = false
+                    
+                    self.objectWillChange.send()
+                }
             }
+        } else {
+            self.previousIndex = index
         }
     }
 }
