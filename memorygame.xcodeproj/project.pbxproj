@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A464729E50F5700F7DADB /* MemoryGameBloc.swift */; };
 		75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */; };
 		75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */; };
 		75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D029E0FE7300AC18C9 /* guessWord.swift */; };
-		75BCC9D329E0FFC900AC18C9 /* wordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D229E0FFC900AC18C9 /* wordList.swift */; };
+		75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */; };
 		75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BA429DE63C600B3C221 /* memorygameApp.swift */; };
 		75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BA629DE63C600B3C221 /* ContentView.swift */; };
 		75C45BA929DE63C700B3C221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C45BA829DE63C700B3C221 /* Assets.xcassets */; };
@@ -21,10 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		754A464729E50F5700F7DADB /* MemoryGameBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameBloc.swift; sourceTree = "<group>"; };
 		75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficultyLevel.swift; sourceTree = "<group>"; };
 		75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detectOrientation.swift; sourceTree = "<group>"; };
 		75BCC9D029E0FE7300AC18C9 /* guessWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWord.swift; sourceTree = "<group>"; };
-		75BCC9D229E0FFC900AC18C9 /* wordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordList.swift; sourceTree = "<group>"; };
+		75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		75C45BA129DE63C600B3C221 /* memorygame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memorygame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C45BA429DE63C600B3C221 /* memorygameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorygameApp.swift; sourceTree = "<group>"; };
 		75C45BA629DE63C600B3C221 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,7 +150,7 @@
 		75C45BB729DE6B6700B3C221 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				75BCC9D229E0FFC900AC18C9 /* wordList.swift */,
+				75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -182,6 +184,7 @@
 		75C45BBC29DE6C8800B3C221 /* bloc */ = {
 			isa = PBXGroup;
 			children = (
+				754A464729E50F5700F7DADB /* MemoryGameBloc.swift */,
 			);
 			path = bloc;
 			sourceTree = "<group>";
@@ -266,12 +269,13 @@
 			files = (
 				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
 				75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */,
+				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
 				75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */,
 				75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */,
-				75BCC9D329E0FFC900AC18C9 /* wordList.swift in Sources */,
+				75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */,
 				75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
