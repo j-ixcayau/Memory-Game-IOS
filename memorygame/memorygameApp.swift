@@ -11,7 +11,7 @@ import SwiftUI
 struct memorygameApp: App {
     var body: some Scene {
         WindowGroup {
-            MemoryGamePage(dificultyLevel: .Medium)
+            MemoryGamePage(difficultyLevel: .Hard)
         }
     }
 }

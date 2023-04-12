@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct MemoryCard: View {
-    @State private var flipped: Bool = false
-    
-    let value: String
+    let guessWord: GuessWord
+    let onTap: () -> Void
     
     var body: some View {
         ZStack{
             Color("BackgroundColor")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            Text(value)
+            Text(guessWord.word)
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .opacity(flipped ? 1 : 0)
+                .opacity(guessWord.isFlipped ? 1 : 0)
+                .animation(.spring(), value: guessWord.isFlipped)
         }
         .frame(width: 100, height: 100)
         .overlay(
@@ -32,20 +32,25 @@ struct MemoryCard: View {
                 lineWidth: 4
             )
         )
-        .rotation3DEffect(.degrees(flipped ? 0: 180), axis: (x: 1, y: 1, z: 0))
+        .rotation3DEffect(.degrees(guessWord.isFlipped ? 0: 180), axis: (x: 1, y: 1, z: 0))
+        .animation(.spring(), value: guessWord.isFlipped)
         .onTapGesture {
-            withAnimation(.spring()){
-                flipped.toggle()
-            }
+            onTap()
         }
         .padding()
+        //        .onAppear {
+        //            guessWord.isFlipped = (guessWord.isGuessed || guessWord.isGuessing || guessWord.isFlipped)
+        //        }
     }
 }
 
 struct MemoryCard_Previews: PreviewProvider {
     static var previews: some View {
         MemoryCard(
-            value: "Non text"
+            guessWord: GuessWord(word: "TS"),
+            onTap: {
+                
+            }
         )
     }
 }
