@@ -22,7 +22,8 @@ struct MemoryCard: View {
                 .opacity(guessWord.isFlipped ? 1 : 0)
                 .animation(.spring(), value: guessWord.isFlipped)
         }
-        .frame(width: 100, height: 100)
+        .frame(width: guessWord.isFlipped ? 100 : 80, height: guessWord.isFlipped ? 80 : 100)
+        .animation(.spring(), value: guessWord.isFlipped)
         .overlay(
             RoundedRectangle(
                 cornerRadius: 16
@@ -37,10 +38,10 @@ struct MemoryCard: View {
         .onTapGesture {
             onTap()
         }
-        .padding()
-        //        .onAppear {
-        //            guessWord.isFlipped = (guessWord.isGuessed || guessWord.isGuessing || guessWord.isFlipped)
-        //        }
+        .padding(.vertical, guessWord.isFlipped ? 10 : 5)
+        .animation(.spring(), value: guessWord.isFlipped)
+        .padding(.vertical, guessWord.isFlipped ? 5 : 10)
+        .animation(.spring(), value: guessWord.isFlipped)
     }
 }
 

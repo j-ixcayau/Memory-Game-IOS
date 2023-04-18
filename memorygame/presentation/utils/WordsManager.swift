@@ -147,9 +147,9 @@ struct WordsManager {
         case .Easy:
             return 3
         case .Medium:
-            return 5
+            return 6
         case .Hard:
-            return 7
+            return 9
         }
     }
     

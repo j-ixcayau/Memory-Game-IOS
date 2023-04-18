@@ -22,7 +22,7 @@ struct MemoryGamePage: View {
         BaseScreen(
             navigationTitle: "Level: \(memoryGameBloc.difficultyLevel)",
             child: {
-                Text("Resolve the items")
+                Text("Resolve the items\tAttempts: \(memoryGameBloc.attemptsCount)")
                 
                 LazyVGrid(
                     columns: gridColumns,
@@ -42,7 +42,7 @@ struct MemoryGamePage: View {
         .detectOrientation($orientation) {
             updateChanges()
         }
-        .onAppear{
+        .onAppear {
             orientation = UIDevice.current.orientation
             updateChanges()
         }

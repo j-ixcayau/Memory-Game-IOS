@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MemoryGameBloc: ObservableObject {
     
@@ -15,6 +16,7 @@ class MemoryGameBloc: ObservableObject {
     @Published var words = [GuessWord]()
     @Published var difficultyLevel: DifficultyLevel
     @Published var previousIndex: Int? = nil
+    @Published var attemptsCount: Int = 0
     
     init(difficultyLevel: DifficultyLevel){
         self.difficultyLevel = difficultyLevel
@@ -49,6 +51,12 @@ class MemoryGameBloc: ObservableObject {
                 
                 objectWillChange.send()
             } else {
+                attemptsCount += 1
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                }
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
                     self.words[previousIndex].resetValues()
                     self.words[index].resetValues()
