@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763429E66B31006AEB5C /* LevelChooseBloc.swift */; };
+		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
+		7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */; };
 		754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A464729E50F5700F7DADB /* MemoryGameBloc.swift */; };
 		75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */; };
 		75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7540763429E66B31006AEB5C /* LevelChooseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseBloc.swift; sourceTree = "<group>"; };
+		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
+		7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseWidget.swift; sourceTree = "<group>"; };
 		754A464729E50F5700F7DADB /* MemoryGameBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameBloc.swift; sourceTree = "<group>"; };
 		75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficultyLevel.swift; sourceTree = "<group>"; };
 		75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detectOrientation.swift; sourceTree = "<group>"; };
@@ -49,6 +55,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7540763029E66887006AEB5C /* choose_level */ = {
+			isa = PBXGroup;
+			children = (
+				7540763329E668AE006AEB5C /* bloc */,
+				7540763229E668A8006AEB5C /* ui */,
+				7540763129E668A2006AEB5C /* widgets */,
+			);
+			path = choose_level;
+			sourceTree = "<group>";
+		};
+		7540763129E668A2006AEB5C /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		7540763229E668A8006AEB5C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				7540763629E66B48006AEB5C /* LevelChoosePage.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		7540763329E668AE006AEB5C /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+				7540763429E66B31006AEB5C /* LevelChooseBloc.swift */,
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
 		75BCC9C929E0EA5B00AC18C9 /* enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +182,7 @@
 		75C45BB629DE6B5E00B3C221 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				7540763029E66887006AEB5C /* choose_level */,
 				75C45BB929DE6B9800B3C221 /* memory_game */,
 			);
 			path = features;
@@ -273,9 +314,12 @@
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
+				7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */,
 				75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */,
 				75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */,
+				7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */,
 				75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */,
+				7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */,
 				75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
