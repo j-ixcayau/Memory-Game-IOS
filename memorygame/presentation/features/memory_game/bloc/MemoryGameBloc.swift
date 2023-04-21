@@ -54,7 +54,7 @@ class MemoryGameBloc: ObservableObject {
                 attemptsCount += 1
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                    self.displayErrorVibrations()
                 }
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
@@ -69,5 +69,10 @@ class MemoryGameBloc: ObservableObject {
         } else {
             self.previousIndex = index
         }
+    }
+    
+    
+    private func displayErrorVibrations(){
+        UINotificationFeedbackGenerator().notificationOccurred(.error)
     }
 }

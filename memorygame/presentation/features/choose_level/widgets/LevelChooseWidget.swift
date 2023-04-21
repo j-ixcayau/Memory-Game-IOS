@@ -8,36 +8,30 @@
 import SwiftUI
 
 struct LevelChooseWidget: View {
-    let value: String
     let difficultyLevel: DifficultyLevel
+    let onTap: (_ difficultyLevel: DifficultyLevel) -> Void
     
     var body: some View {
-        
-        NavigationLink(
-            destination: MemoryGamePage(difficultyLevel: difficultyLevel)
-        ) {
-            Text(value)
-                .padding()
-                .frame(maxWidth: .infinity, maxHeight: 70)
-                .overlay(
-                    RoundedRectangle(
-                        cornerRadius: 16
-                    )
-                    .stroke(
-                        .blue,
-                        lineWidth: 4
-                    )
-                )
-        }
-        .padding()
+        OnViewTap(
+            child: {
+                Text(difficultyLevel.description)
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: 70)
+            },
+            onTap: {
+                onTap(difficultyLevel)
+            }
+        )
     }
 }
 
 struct LevelChooseWidget_Previews: PreviewProvider {
     static var previews: some View {
         LevelChooseWidget(
-            value: "Easy",
-            difficultyLevel: .Easy
+            difficultyLevel: .Easy,
+            onTap: { difficultyLevel in
+                
+            }
         )
     }
 }

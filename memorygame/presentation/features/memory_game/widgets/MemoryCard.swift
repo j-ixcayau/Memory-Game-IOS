@@ -38,9 +38,9 @@ struct MemoryCard: View {
         .onTapGesture {
             onTap()
         }
-        .padding(.vertical, guessWord.isFlipped ? 10 : 5)
+        .padding(.vertical, guessWord.isFlipped ? 10 : 0)
         .animation(.spring(), value: guessWord.isFlipped)
-        .padding(.vertical, guessWord.isFlipped ? 5 : 10)
+        .padding(.horizontal, guessWord.isFlipped ? 0 : 10)
         .animation(.spring(), value: guessWord.isFlipped)
     }
 }
