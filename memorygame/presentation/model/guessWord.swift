@@ -20,27 +20,21 @@ class GuessWord: ObservableObject, CustomStringConvertible {
     }
     
     func startGuessing(){
-        print("startGuessing \(word)")
-        
         isGuessing = true
         isFlipped = true
     }
     
     func markAsGuessed(){
-        print("markAsGuessed \(word)")
-        
         isGuessed = true
         isFlipped = true
     }
     
     func resetValues(){
-        print("resetValues \(word)")
-        
         isGuessed = false
         isGuessing = false
         isFlipped = false
     }
-
+    
     var description: String {
         return "GuessWord(id: \(id), word: \(word), isGuessed: \(isGuessed), isGuessing: \(isGuessing), isFlipped: \(isFlipped))"
     }

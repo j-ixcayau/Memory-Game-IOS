@@ -15,21 +15,32 @@ struct LevelChoosePage: View {
             navigationTitle: "Choose a level",
             child: {
                 LevelChooseWidget(
-                    value: "Easy",
-                    difficultyLevel: .Easy
+                    difficultyLevel: .Easy,
+                    onTap: onDifficultyTap
                 )
                 
                 LevelChooseWidget(
-                    value: "Medium",
-                    difficultyLevel: .Medium
+                    difficultyLevel: .Medium,
+                    onTap: onDifficultyTap
                 )
                 
                 LevelChooseWidget(
-                    value: "Hard",
-                    difficultyLevel: .Hard
+                    difficultyLevel: .Hard,
+                    onTap: onDifficultyTap
+                )
+                .navigationDestination(
+                    isPresented: $levelChooseBloc.isNavigationActive,
+                    destination: {
+                        MemoryGamePage(difficultyLevel: levelChooseBloc.difficultyLevel)
+                    }
                 )
             }
         )
+    }
+    
+    func onDifficultyTap(difficultyLevel: DifficultyLevel){
+        levelChooseBloc.difficultyLevel = difficultyLevel
+        levelChooseBloc.isNavigationActive.toggle()
     }
 }
 

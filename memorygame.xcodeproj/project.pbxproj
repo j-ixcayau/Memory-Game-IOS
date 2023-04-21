@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F65DF29ED190B0095FFAC /* OnViewTap.swift */; };
 		7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763429E66B31006AEB5C /* LevelChooseBloc.swift */; };
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
 		7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751F65DF29ED190B0095FFAC /* OnViewTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnViewTap.swift; sourceTree = "<group>"; };
 		7540763429E66B31006AEB5C /* LevelChooseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseBloc.swift; sourceTree = "<group>"; };
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
 		7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseWidget.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */,
+				751F65DF29ED190B0095FFAC /* OnViewTap.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
+				751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
 				7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */,
 				75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */,
@@ -450,7 +454,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Memory Game";
+				INFOPLIST_KEY_CFBundleDisplayName = Memorama;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -466,7 +470,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorygame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -490,7 +494,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Memory Game";
+				INFOPLIST_KEY_CFBundleDisplayName = Memorama;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -506,7 +510,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorygame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

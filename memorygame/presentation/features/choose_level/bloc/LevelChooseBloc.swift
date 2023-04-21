@@ -8,5 +8,6 @@
 import Foundation
 
 class LevelChooseBloc: ObservableObject {
-    @Published var difficultyLevel: DifficultyLevel?
+    @Published var difficultyLevel: DifficultyLevel = .Easy
+    @Published var isNavigationActive: Bool = false
 }

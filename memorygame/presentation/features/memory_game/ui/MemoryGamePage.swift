@@ -22,7 +22,7 @@ struct MemoryGamePage: View {
         BaseScreen(
             navigationTitle: "Level: \(memoryGameBloc.difficultyLevel)",
             child: {
-                Text("Resolve the items\tAttempts: \(memoryGameBloc.attemptsCount)")
+                Text("Resolve the items\nWrong attempts: \(memoryGameBloc.attemptsCount)")
                 
                 LazyVGrid(
                     columns: gridColumns,
@@ -69,6 +69,6 @@ struct MemoryGamePage: View {
 
 struct MemoryGamePage_Previews: PreviewProvider {
     static var previews: some View {
-        MemoryGamePage(difficultyLevel: .Medium)
+        MemoryGamePage(difficultyLevel: .Easy)
     }
 }
