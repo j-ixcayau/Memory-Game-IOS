@@ -20,9 +20,8 @@ struct MemoryGamePage: View {
     
     var body: some View {
         BaseScreen(
-            navigationTitle: "Level: \(memoryGameBloc.difficultyLevel)",
             child: {
-                Text("Resolve the items\nWrong attempts: \(memoryGameBloc.attemptsCount)")
+                Text("Resolve the items\nWrong attempts: \(memoryGameBloc.attempErrorsCounter)")
                 
                 LazyVGrid(
                     columns: gridColumns,
@@ -37,6 +36,7 @@ struct MemoryGamePage: View {
                         )
                     }
                 }
+                .navigationTitle("Level: \(memoryGameBloc.difficultyLevel.description)")
             }
         )
         .detectOrientation($orientation) {
