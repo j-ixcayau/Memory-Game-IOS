@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750C29A929F25004006CED66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750C29A829F25004006CED66 /* GoogleService-Info.plist */; };
+		750C29AC29F250A4006CED66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AB29F250A4006CED66 /* FirebaseAnalytics */; };
+		750C29AE29F250A4006CED66 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AD29F250A4006CED66 /* FirebaseAuth */; };
+		750C29B029F250A4006CED66 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AF29F250A4006CED66 /* FirebaseCrashlytics */; };
+		750C29B229F250A4006CED66 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29B129F250A4006CED66 /* FirebaseFirestore */; };
+		750C29B829F25615006CED66 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29B729F25615006CED66 /* LoginPage.swift */; };
+		750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BC29F25DA8006CED66 /* RootPage.swift */; };
+		750C29BF29F26584006CED66 /* RootBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BE29F26584006CED66 /* RootBloc.swift */; };
 		751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F65DF29ED190B0095FFAC /* OnViewTap.swift */; };
 		7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763429E66B31006AEB5C /* LevelChooseBloc.swift */; };
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
@@ -16,16 +24,24 @@
 		75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */; };
 		75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D029E0FE7300AC18C9 /* guessWord.swift */; };
 		75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */; };
+		75BE308829F63C3900B5A1E8 /* LoginBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE308729F63C3900B5A1E8 /* LoginBloc.swift */; };
+		75BE308B29F6454A00B5A1E8 /* CommonInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE308A29F6454A00B5A1E8 /* CommonInput.swift */; };
 		75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BA429DE63C600B3C221 /* memorygameApp.swift */; };
-		75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BA629DE63C600B3C221 /* ContentView.swift */; };
 		75C45BA929DE63C700B3C221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C45BA829DE63C700B3C221 /* Assets.xcassets */; };
 		75C45BAD29DE63C700B3C221 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C45BAC29DE63C700B3C221 /* Preview Assets.xcassets */; };
 		75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */; };
 		75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */; };
 		75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BC329DE894700B3C221 /* MemoryCard.swift */; };
+		75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD729FAEE0F00321D37 /* CommonButtons.swift */; };
+		75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD929FAF0AE00321D37 /* CommonBackground.swift */; };
+		75F517C929F7A01E000C197E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F517C829F7A01E000C197E /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750C29A829F25004006CED66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		750C29B729F25615006CED66 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		750C29BC29F25DA8006CED66 /* RootPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPage.swift; sourceTree = "<group>"; };
+		750C29BE29F26584006CED66 /* RootBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBloc.swift; sourceTree = "<group>"; };
 		751F65DF29ED190B0095FFAC /* OnViewTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnViewTap.swift; sourceTree = "<group>"; };
 		7540763429E66B31006AEB5C /* LevelChooseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseBloc.swift; sourceTree = "<group>"; };
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
@@ -35,15 +51,19 @@
 		75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detectOrientation.swift; sourceTree = "<group>"; };
 		75BCC9D029E0FE7300AC18C9 /* guessWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWord.swift; sourceTree = "<group>"; };
 		75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
+		75BE308729F63C3900B5A1E8 /* LoginBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBloc.swift; sourceTree = "<group>"; };
+		75BE308A29F6454A00B5A1E8 /* CommonInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInput.swift; sourceTree = "<group>"; };
 		75C45BA129DE63C600B3C221 /* memorygame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memorygame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C45BA429DE63C600B3C221 /* memorygameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memorygameApp.swift; sourceTree = "<group>"; };
-		75C45BA629DE63C600B3C221 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75C45BA829DE63C700B3C221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C45BAA29DE63C700B3C221 /* memorygame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = memorygame.entitlements; sourceTree = "<group>"; };
 		75C45BAC29DE63C700B3C221 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGamePage.swift; sourceTree = "<group>"; };
 		75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		75C45BC329DE894700B3C221 /* MemoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCard.swift; sourceTree = "<group>"; };
+		75D25DD729FAEE0F00321D37 /* CommonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtons.swift; sourceTree = "<group>"; };
+		75D25DD929FAF0AE00321D37 /* CommonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBackground.swift; sourceTree = "<group>"; };
+		75F517C829F7A01E000C197E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,12 +71,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750C29B029F250A4006CED66 /* FirebaseCrashlytics in Frameworks */,
+				750C29B229F250A4006CED66 /* FirebaseFirestore in Frameworks */,
+				750C29AC29F250A4006CED66 /* FirebaseAnalytics in Frameworks */,
+				750C29AE29F250A4006CED66 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		750C29B329F255E2006CED66 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				750C29B629F255FF006CED66 /* bloc */,
+				750C29B529F255F6006CED66 /* ui */,
+				750C29B429F255EC006CED66 /* widgets */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		750C29B429F255EC006CED66 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		750C29B529F255F6006CED66 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				750C29B729F25615006CED66 /* LoginPage.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		750C29B629F255FF006CED66 /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+				75BE308729F63C3900B5A1E8 /* LoginBloc.swift */,
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
+		750C29B929F25CAE006CED66 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				750C29BB29F25CC8006CED66 /* bloc */,
+				750C29BA29F25CBD006CED66 /* ui */,
+				75F517C629F7A003000C197E /* widgets */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		750C29BA29F25CBD006CED66 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				750C29BC29F25DA8006CED66 /* RootPage.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		750C29BB29F25CC8006CED66 /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+				750C29BE29F26584006CED66 /* RootBloc.swift */,
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
 		7540763029E66887006AEB5C /* choose_level */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */,
+				75D25DD929FAF0AE00321D37 /* CommonBackground.swift */,
 			);
 			path = modifiers;
 			sourceTree = "<group>";
@@ -138,9 +222,9 @@
 				75C45BB429DE6B4D00B3C221 /* data */,
 				75C45BB329DE6B4000B3C221 /* presentation */,
 				75C45BA429DE63C600B3C221 /* memorygameApp.swift */,
-				75C45BA629DE63C600B3C221 /* ContentView.swift */,
 				75C45BA829DE63C700B3C221 /* Assets.xcassets */,
 				75C45BAA29DE63C700B3C221 /* memorygame.entitlements */,
+				750C29A829F25004006CED66 /* GoogleService-Info.plist */,
 				75C45BAB29DE63C700B3C221 /* Preview Content */,
 			);
 			path = memorygame;
@@ -184,6 +268,8 @@
 		75C45BB629DE6B5E00B3C221 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				750C29B929F25CAE006CED66 /* root */,
+				750C29B329F255E2006CED66 /* login */,
 				7540763029E66887006AEB5C /* choose_level */,
 				75C45BB929DE6B9800B3C221 /* memory_game */,
 			);
@@ -203,6 +289,8 @@
 			children = (
 				75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */,
 				751F65DF29ED190B0095FFAC /* OnViewTap.swift */,
+				75BE308A29F6454A00B5A1E8 /* CommonInput.swift */,
+				75D25DD729FAEE0F00321D37 /* CommonButtons.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
@@ -241,6 +329,14 @@
 			path = widgets;
 			sourceTree = "<group>";
 		};
+		75F517C629F7A003000C197E /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				75F517C829F7A01E000C197E /* LoadingView.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +353,12 @@
 			dependencies = (
 			);
 			name = memorygame;
+			packageProductDependencies = (
+				750C29AB29F250A4006CED66 /* FirebaseAnalytics */,
+				750C29AD29F250A4006CED66 /* FirebaseAuth */,
+				750C29AF29F250A4006CED66 /* FirebaseCrashlytics */,
+				750C29B129F250A4006CED66 /* FirebaseFirestore */,
+			);
 			productName = memorygame;
 			productReference = 75C45BA129DE63C600B3C221 /* memorygame.app */;
 			productType = "com.apple.product-type.application";
@@ -285,6 +387,9 @@
 				Base,
 			);
 			mainGroup = 75C45B9829DE63C600B3C221;
+			packageReferences = (
+				750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 75C45BA229DE63C600B3C221 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -301,6 +406,7 @@
 			files = (
 				75C45BAD29DE63C700B3C221 /* Preview Assets.xcassets in Resources */,
 				75C45BA929DE63C700B3C221 /* Assets.xcassets in Resources */,
+				750C29A929F25004006CED66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,18 +418,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
-				75C45BA729DE63C600B3C221 /* ContentView.swift in Sources */,
 				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
+				75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */,
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
 				751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */,
+				750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
+				75BE308B29F6454A00B5A1E8 /* CommonInput.swift in Sources */,
+				75BE308829F63C3900B5A1E8 /* LoginBloc.swift in Sources */,
 				7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */,
+				75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */,
 				75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */,
 				75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */,
 				7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */,
 				75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */,
 				7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */,
+				750C29BF29F26584006CED66 /* RootBloc.swift in Sources */,
+				750C29B829F25615006CED66 /* LoginPage.swift in Sources */,
+				75F517C929F7A01E000C197E /* LoadingView.swift in Sources */,
 				75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +655,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		750C29AB29F250A4006CED66 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		750C29AD29F250A4006CED66 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		750C29AF29F250A4006CED66 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		750C29B129F250A4006CED66 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75C45B9929DE63C600B3C221 /* Project object */;
 }

@@ -11,31 +11,39 @@ struct LevelChoosePage: View {
     @ObservedObject var levelChooseBloc: LevelChooseBloc = LevelChooseBloc()
     
     var body: some View {
-        BaseScreen(
-            navigationTitle: "Choose a level",
-            child: {
-                LevelChooseWidget(
-                    difficultyLevel: .Easy,
-                    onTap: onDifficultyTap
-                )
+        NavigationStack {
+            VStack {
+                Spacer()
                 
-                LevelChooseWidget(
-                    difficultyLevel: .Medium,
-                    onTap: onDifficultyTap
-                )
+                ForEach(DifficultyLevel.allCases, id: \.description){ level in
+                    LevelChooseWidget(
+                        difficultyLevel: level,
+                        onTap: onDifficultyTap
+                    )
+                    .frame(height: 100)
+                }
                 
-                LevelChooseWidget(
-                    difficultyLevel: .Hard,
-                    onTap: onDifficultyTap
-                )
-                .navigationDestination(
-                    isPresented: $levelChooseBloc.isNavigationActive,
-                    destination: {
-                        MemoryGamePage(difficultyLevel: levelChooseBloc.difficultyLevel)
+                Spacer()
+                
+                CommonButtons(
+                    title: "Logout",
+                    action: {
+                        levelChooseBloc.logout()
                     }
                 )
             }
-        )
+            .padding()
+            .navigationTitle("Choose a level")
+            .navigationDestination(
+                isPresented: $levelChooseBloc.isNavigationActive,
+                destination: {
+                    MemoryGamePage(
+                        difficultyLevel: levelChooseBloc.difficultyLevel
+                    )
+                }
+            )
+            .commonBackground()
+        }
     }
     
     func onDifficultyTap(difficultyLevel: DifficultyLevel){
