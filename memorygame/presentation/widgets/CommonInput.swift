@@ -12,23 +12,8 @@ struct CommonInput: View {
     
     var title: String?
     var hint: String?
-    var isPassword: Bool = false
     
     var keyboardType: UIKeyboardType = UIKeyboardType.default
-    
-    
-    private var inputView: AnyView {
-        if isPassword {
-            return AnyView(
-                SecureField(hint ?? "", text: $content)
-            )
-        } else {
-            return AnyView(
-                TextField(hint ?? "", text: $content)
-            )
-        }
-    }
-    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -38,7 +23,7 @@ struct CommonInput: View {
                     .foregroundColor(Color.primary)
             }
             
-            inputView
+            TextField(hint ?? "", text: $content)
                 .keyboardType(keyboardType)
                 .padding(.all, 10)
                 .cornerRadius(5)

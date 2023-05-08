@@ -20,6 +20,7 @@
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
 		7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */; };
 		754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A464729E50F5700F7DADB /* MemoryGameBloc.swift */; };
+		75BB879D2A04BA7F00497ACA /* StringValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB879C2A04BA7F00497ACA /* StringValidations.swift */; };
 		75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */; };
 		75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */; };
 		75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D029E0FE7300AC18C9 /* guessWord.swift */; };
@@ -32,6 +33,7 @@
 		75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */; };
 		75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */; };
 		75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BC329DE894700B3C221 /* MemoryCard.swift */; };
+		75CAA53E2A08A17200580E2C /* PasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA53D2A08A17200580E2C /* PasswordInput.swift */; };
 		75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD729FAEE0F00321D37 /* CommonButtons.swift */; };
 		75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD929FAF0AE00321D37 /* CommonBackground.swift */; };
 		75F517C929F7A01E000C197E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F517C829F7A01E000C197E /* LoadingView.swift */; };
@@ -47,6 +49,7 @@
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
 		7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseWidget.swift; sourceTree = "<group>"; };
 		754A464729E50F5700F7DADB /* MemoryGameBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameBloc.swift; sourceTree = "<group>"; };
+		75BB879C2A04BA7F00497ACA /* StringValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidations.swift; sourceTree = "<group>"; };
 		75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficultyLevel.swift; sourceTree = "<group>"; };
 		75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detectOrientation.swift; sourceTree = "<group>"; };
 		75BCC9D029E0FE7300AC18C9 /* guessWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWord.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGamePage.swift; sourceTree = "<group>"; };
 		75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		75C45BC329DE894700B3C221 /* MemoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCard.swift; sourceTree = "<group>"; };
+		75CAA53D2A08A17200580E2C /* PasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInput.swift; sourceTree = "<group>"; };
 		75D25DD729FAEE0F00321D37 /* CommonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtons.swift; sourceTree = "<group>"; };
 		75D25DD929FAF0AE00321D37 /* CommonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBackground.swift; sourceTree = "<group>"; };
 		75F517C829F7A01E000C197E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */,
+				75BB879C2A04BA7F00497ACA /* StringValidations.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				751F65DF29ED190B0095FFAC /* OnViewTap.swift */,
 				75BE308A29F6454A00B5A1E8 /* CommonInput.swift */,
 				75D25DD729FAEE0F00321D37 /* CommonButtons.swift */,
+				75CAA53D2A08A17200580E2C /* PasswordInput.swift */,
 			);
 			path = widgets;
 			sourceTree = "<group>";
@@ -436,8 +442,10 @@
 				7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */,
 				750C29BF29F26584006CED66 /* RootBloc.swift in Sources */,
 				750C29B829F25615006CED66 /* LoginPage.swift in Sources */,
+				75CAA53E2A08A17200580E2C /* PasswordInput.swift in Sources */,
 				75F517C929F7A01E000C197E /* LoadingView.swift in Sources */,
 				75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */,
+				75BB879D2A04BA7F00497ACA /* StringValidations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
