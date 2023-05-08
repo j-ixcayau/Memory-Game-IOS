@@ -21,10 +21,9 @@ struct LoginPage: View {
                     keyboardType: UIKeyboardType.emailAddress
                 )
                 
-                CommonInput(
+                PasswordInput(
                     content: $loginBloc.passwordController,
                     title: "Password",
-                    isPassword: true,
                     keyboardType: UIKeyboardType.default
                 )
                 .padding(.bottom, 50)
@@ -41,6 +40,20 @@ struct LoginPage: View {
             .padding()
             .navigationTitle("Login")
             .commonBackground()
+            .alert(isPresented: $loginBloc.showInvalidFieldsError) {
+                Alert(
+                    title: Text("Invalid credentials"),
+                    message: Text("Please check your email or password to match the required format"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
+            .alert(isPresented: $loginBloc.showAuthError) {
+                Alert(
+                    title: Text("Something went wrong"),
+                    message: Text(loginBloc.authErrorMessage),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
