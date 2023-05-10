@@ -1,8 +1,8 @@
 //
-//  LoginBloc.swift
+//  RegisterBloc.swift
 //  memorygame
 //
-//  Created by Jontahan Ixcayau on 23/04/23.
+//  Created by Jontahan Ixcayau on 7/05/23.
 //
 
 import Foundation
@@ -10,22 +10,30 @@ import Firebase
 import FirebaseCore
 import FirebaseAuth
 
-class LoginBloc: ObservableObject {
+class RegisterBloc: ObservableObject {
     
     @Published var emailController: String = ""
     @Published var passwordController: String = ""
+    @Published var confirmPasswordController: String = ""
     
     @Published var showAlert: Bool = false
-    var showAlertType: LoginAlertType = LoginAlertType.invalidCredentials
+    var showAlertType: RegisterAlertType = RegisterAlertType.invalidCredentials
     
     private let firebaseAuth = Auth.auth()
     private let stringValidator = StringValidator()
     
-    func onLoginTap(){
+    func onRegisterTap(){
         let email = emailController.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordController.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmPassword = confirmPasswordController.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if email.isEmpty || password.isEmpty {
+        if email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
+            return
+        }
+        
+        if password != confirmPassword {
+            showAlertType = .unmatchedPasswords
+            showAlert = true
             return
         }
         
@@ -35,32 +43,26 @@ class LoginBloc: ObservableObject {
         if !validEmail || !validPassword {
             showAlertType = .invalidCredentials
             showAlert = true
-            
             return
         }
         
-        performLogin(email, password)
+        performRegister(email, password)
     }
     
-    
-    private func performLogin(_ email: String, _ password: String){
-        firebaseAuth.signIn(withEmail: email, password: password) { authResult, error in
+    private func performRegister(_ email: String, _ password: String){
+        firebaseAuth.createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 let errorCode = (error as NSError).code
-                var errorMessage: String = ""
+                var errorMesssage: String = ""
                 
                 switch errorCode {
-                case AuthErrorCode.wrongPassword.rawValue:
-                    errorMessage = "Wrong password"
-                case AuthErrorCode.userNotFound.rawValue:
-                    errorMessage = "User not found"
-                case AuthErrorCode.networkError.rawValue:
-                    errorMessage = "Network error"
+                case AuthErrorCode.emailAlreadyInUse.rawValue:
+                    errorMesssage = "The email address is already in use"
                 default:
-                    errorMessage = "Other error occurred: \(error.localizedDescription)"
+                    errorMesssage = "Other error occurred: \(error.localizedDescription)"
                 }
                 
-                self.showAlertType = .registerError(errorMessage)
+                self.showAlertType = .registerError(errorMesssage)
                 self.showAlert = true
                 
                 return
@@ -73,4 +75,3 @@ class LoginBloc: ObservableObject {
         }
     }
 }
-
