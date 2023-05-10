@@ -15,6 +15,7 @@
 		750C29B829F25615006CED66 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29B729F25615006CED66 /* LoginPage.swift */; };
 		750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BC29F25DA8006CED66 /* RootPage.swift */; };
 		750C29BF29F26584006CED66 /* RootBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BE29F26584006CED66 /* RootBloc.swift */; };
+		751181AC2A0B545300BDC4B2 /* LoginAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751181AB2A0B545300BDC4B2 /* LoginAlerts.swift */; };
 		751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F65DF29ED190B0095FFAC /* OnViewTap.swift */; };
 		7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763429E66B31006AEB5C /* LevelChooseBloc.swift */; };
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
@@ -34,6 +35,9 @@
 		75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */; };
 		75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C45BC329DE894700B3C221 /* MemoryCard.swift */; };
 		75CAA53E2A08A17200580E2C /* PasswordInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA53D2A08A17200580E2C /* PasswordInput.swift */; };
+		75CAA5442A08BAAB00580E2C /* RegisterBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5432A08BAAB00580E2C /* RegisterBloc.swift */; };
+		75CAA5462A08BC0A00580E2C /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5452A08BC0A00580E2C /* RegisterPage.swift */; };
+		75CAA5482A08C8B600580E2C /* RegisterAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5472A08C8B600580E2C /* RegisterAlerts.swift */; };
 		75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD729FAEE0F00321D37 /* CommonButtons.swift */; };
 		75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD929FAF0AE00321D37 /* CommonBackground.swift */; };
 		75F517C929F7A01E000C197E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F517C829F7A01E000C197E /* LoadingView.swift */; };
@@ -44,6 +48,7 @@
 		750C29B729F25615006CED66 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		750C29BC29F25DA8006CED66 /* RootPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPage.swift; sourceTree = "<group>"; };
 		750C29BE29F26584006CED66 /* RootBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBloc.swift; sourceTree = "<group>"; };
+		751181AB2A0B545300BDC4B2 /* LoginAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlerts.swift; sourceTree = "<group>"; };
 		751F65DF29ED190B0095FFAC /* OnViewTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnViewTap.swift; sourceTree = "<group>"; };
 		7540763429E66B31006AEB5C /* LevelChooseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseBloc.swift; sourceTree = "<group>"; };
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		75C45BBF29DE7E3400B3C221 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
 		75C45BC329DE894700B3C221 /* MemoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCard.swift; sourceTree = "<group>"; };
 		75CAA53D2A08A17200580E2C /* PasswordInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordInput.swift; sourceTree = "<group>"; };
+		75CAA5432A08BAAB00580E2C /* RegisterBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBloc.swift; sourceTree = "<group>"; };
+		75CAA5452A08BC0A00580E2C /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
+		75CAA5472A08C8B600580E2C /* RegisterAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAlerts.swift; sourceTree = "<group>"; };
 		75D25DD729FAEE0F00321D37 /* CommonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtons.swift; sourceTree = "<group>"; };
 		75D25DD929FAF0AE00321D37 /* CommonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBackground.swift; sourceTree = "<group>"; };
 		75F517C829F7A01E000C197E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				750C29B729F25615006CED66 /* LoginPage.swift */,
+				751181AB2A0B545300BDC4B2 /* LoginAlerts.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				750C29B929F25CAE006CED66 /* root */,
+				75CAA53F2A08BA7100580E2C /* register */,
 				750C29B329F255E2006CED66 /* login */,
 				7540763029E66887006AEB5C /* choose_level */,
 				75C45BB929DE6B9800B3C221 /* memory_game */,
@@ -333,6 +343,40 @@
 				75C45BC329DE894700B3C221 /* MemoryCard.swift */,
 			);
 			path = widgets;
+			sourceTree = "<group>";
+		};
+		75CAA53F2A08BA7100580E2C /* register */ = {
+			isa = PBXGroup;
+			children = (
+				75CAA5402A08BA8500580E2C /* bloc */,
+				75CAA5422A08BA9500580E2C /* ui */,
+				75CAA5412A08BA8F00580E2C /* widgets */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		75CAA5402A08BA8500580E2C /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+				75CAA5432A08BAAB00580E2C /* RegisterBloc.swift */,
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
+		75CAA5412A08BA8F00580E2C /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		75CAA5422A08BA9500580E2C /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				75CAA5452A08BC0A00580E2C /* RegisterPage.swift */,
+				75CAA5472A08C8B600580E2C /* RegisterAlerts.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 		75F517C629F7A003000C197E /* widgets */ = {
@@ -425,13 +469,17 @@
 			files = (
 				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
 				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
+				75CAA5442A08BAAB00580E2C /* RegisterBloc.swift in Sources */,
 				75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */,
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
+				75CAA5462A08BC0A00580E2C /* RegisterPage.swift in Sources */,
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
 				751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */,
 				750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */,
+				751181AC2A0B545300BDC4B2 /* LoginAlerts.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
 				75BE308B29F6454A00B5A1E8 /* CommonInput.swift in Sources */,
+				75CAA5482A08C8B600580E2C /* RegisterAlerts.swift in Sources */,
 				75BE308829F63C3900B5A1E8 /* LoginBloc.swift in Sources */,
 				7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */,
 				75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */,

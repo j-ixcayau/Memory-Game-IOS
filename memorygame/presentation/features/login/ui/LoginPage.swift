@@ -14,20 +14,20 @@ struct LoginPage: View {
     
     var body: some View {
         NavigationStack {
-            VStack{
+            VStack {
                 CommonInput(
                     content: $loginBloc.emailController,
                     title: "Email",
+                    hint: "abcd@gmail.com",
                     keyboardType: UIKeyboardType.emailAddress
                 )
                 
                 PasswordInput(
                     content: $loginBloc.passwordController,
                     title: "Password",
-                    keyboardType: UIKeyboardType.default
+                    hint: "Abcd123$"
                 )
                 .padding(.bottom, 50)
-                
                 
                 CommonButtons(
                     title: "Login",
@@ -36,23 +36,31 @@ struct LoginPage: View {
                     }
                 )
                 .padding(.bottom, 50)
+                
+                NavigationLink {
+                    RegisterPage()
+                } label: {
+                    Text("Register")
+                }
             }
             .padding()
             .navigationTitle("Login")
             .commonBackground()
-            .alert(isPresented: $loginBloc.showInvalidFieldsError) {
-                Alert(
-                    title: Text("Invalid credentials"),
-                    message: Text("Please check your email or password to match the required format"),
-                    dismissButton: .default(Text("OK"))
-                )
-            }
-            .alert(isPresented: $loginBloc.showAuthError) {
-                Alert(
-                    title: Text("Something went wrong"),
-                    message: Text(loginBloc.authErrorMessage),
-                    dismissButton: .default(Text("OK"))
-                )
+            .alert(isPresented: $loginBloc.showAlert) {
+                switch loginBloc.showAlertType {
+                case .invalidCredentials:
+                    return Alert(
+                        title: Text("Invalid credentials"),
+                        message: Text("Please check your email or password to match the required format"),
+                        dismissButton: .default(Text("OK"))
+                    )
+                case .registerError(let error):
+                    return Alert(
+                        title: Text("Something went wrong"),
+                        message: Text(error),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
             }
         }
     }
