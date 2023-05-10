@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MemoryGamePage: View {
-    @ObservedObject var memoryGameBloc : MemoryGameBloc
+    @ObservedObject private var memoryGameBloc : MemoryGameBloc
     
     @State private var orientation = UIDevice.current.orientation
     @State private var columnsCount = 3;
     @State private var gridColumns : [GridItem] = []
     
     init(difficultyLevel: DifficultyLevel) {
-        self.memoryGameBloc = MemoryGameBloc(difficultyLevel: difficultyLevel)
+        let currentDate = Date.now
+        self.memoryGameBloc = MemoryGameBloc(difficultyLevel: difficultyLevel, currentDate: currentDate)
     }
     
     var body: some View {

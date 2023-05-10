@@ -7,19 +7,23 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class MemoryGameBloc: ObservableObject {
     
     let wordsManager = WordsManager()
     var isGuessing: Bool  = false
     
+    let difficultyLevel: DifficultyLevel
+    let currentDate: Date
+    
     @Published var words = [GuessWord]()
-    @Published var difficultyLevel: DifficultyLevel
     @Published var previousIndex: Int? = nil
     @Published var attempErrorsCounter: Int = 0
     
-    init(difficultyLevel: DifficultyLevel){
+    init(difficultyLevel: DifficultyLevel, currentDate: Date){
         self.difficultyLevel = difficultyLevel
+        self.currentDate = currentDate
         
         let guesWords = wordsManager.getListShuffled(dificultyLevel: difficultyLevel)
         
@@ -50,6 +54,8 @@ class MemoryGameBloc: ObservableObject {
                 isGuessing = false
                 
                 objectWillChange.send()
+                
+                self.checkIfGameCompleted()
             } else {
                 attempErrorsCounter += 1
                 
@@ -69,6 +75,33 @@ class MemoryGameBloc: ObservableObject {
         } else {
             self.previousIndex = index
         }
+    }
+    
+    private func checkIfGameCompleted(){
+        let wordUngessed = words.first(where: { !$0.isGuessed } )
+        
+        if wordUngessed != nil {
+            return
+        }
+        
+        onGameWinned()
+    }
+    
+    private func onGameWinned(){
+        let databaseReference = Firestore.firestore().collection("gameWin")
+        let userId = Auth.auth().currentUser?.uid ?? ""
+        
+        let secondsExpended = currentDate.distance(to: Date.now)
+        
+        databaseReference.addDocument(
+            data: [
+                "userId": userId,
+                "difficulty": difficultyLevel.description,
+                "attempsError" : attempErrorsCounter,
+                "secondsExpended": secondsExpended,
+                "creationTime": FieldValue.serverTimestamp()
+            ]
+        )
     }
     
     

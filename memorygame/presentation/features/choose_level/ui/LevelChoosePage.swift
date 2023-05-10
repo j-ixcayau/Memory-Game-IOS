@@ -34,6 +34,7 @@ struct LevelChoosePage: View {
             }
             .padding()
             .navigationTitle("Choose a level")
+            .commonBackground()
             .navigationDestination(
                 isPresented: $levelChooseBloc.isNavigationActive,
                 destination: {
@@ -42,7 +43,6 @@ struct LevelChoosePage: View {
                     )
                 }
             )
-            .commonBackground()
         }
     }
     
