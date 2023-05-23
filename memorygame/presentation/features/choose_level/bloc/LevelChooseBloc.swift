@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 
 class LevelChooseBloc: ObservableObject {
     @Published var difficultyLevel: DifficultyLevel = .Easy

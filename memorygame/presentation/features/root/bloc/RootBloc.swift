@@ -6,18 +6,17 @@
 //
 
 import Foundation
-import Firebase
 import SwiftUI
 
 class RootBloc: ObservableObject {
     @Published var isLoginNavigationActive: Bool = false
     @Published var isHomeNavigationActive: Bool = false
     
-    private let firebaseAuth = Auth.auth()
+    private let repository = AuthRepositoryImpl()
     
     func checkUserLogged(){
-        firebaseAuth.addStateDidChangeListener { auth, user in
-            if user != nil {
+        repository.addStateDidChangeListener { isUserLogged in
+            if isUserLogged {
                 self.isHomeNavigationActive = true
                 self.isLoginNavigationActive = false
             } else {
