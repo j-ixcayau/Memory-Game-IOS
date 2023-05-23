@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class MemoryGameBloc: ObservableObject {
     
@@ -20,6 +20,9 @@ class MemoryGameBloc: ObservableObject {
     @Published var words = [GuessWord]()
     @Published var previousIndex: Int? = nil
     @Published var attempErrorsCounter: Int = 0
+    
+    @Published var showAlert: Bool = false
+    var showAlertType: MemoryGameAlertType = MemoryGameAlertType.gameWon
     
     init(difficultyLevel: DifficultyLevel, currentDate: Date){
         self.difficultyLevel = difficultyLevel
@@ -88,22 +91,26 @@ class MemoryGameBloc: ObservableObject {
     }
     
     private func onGameWinned(){
-        let databaseReference = Firestore.firestore().collection("gameWin")
         let userId = Auth.auth().currentUser?.uid ?? ""
         
         let secondsExpended = currentDate.distance(to: Date.now)
         
-        databaseReference.addDocument(
-            data: [
-                "userId": userId,
-                "difficulty": difficultyLevel.description,
-                "attempsError" : attempErrorsCounter,
-                "secondsExpended": secondsExpended,
-                "creationTime": FieldValue.serverTimestamp()
-            ]
+        let gameWin = GameWin(
+            attemptsError: attempErrorsCounter,
+            creationDate: nil,
+            difficulty: difficultyLevel,
+            secondsExpended: secondsExpended.magnitude,
+            userId: userId
         )
+        
+        GuessWordRepositoryImpl().saveGameWinned(game: gameWin) {
+            self.showAlert = true
+            self.showAlertType = .gameWon
+        } onError: { error in
+            print("Game winned could not be saved")
+        }
+        
     }
-    
     
     private func displayErrorVibrations(){
         UINotificationFeedbackGenerator().notificationOccurred(.error)

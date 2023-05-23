@@ -14,6 +14,8 @@ struct MemoryGamePage: View {
     @State private var columnsCount = 3;
     @State private var gridColumns : [GridItem] = []
     
+    @Environment(\.presentationMode) var presentation
+    
     init(difficultyLevel: DifficultyLevel) {
         let currentDate = Date.now
         self.memoryGameBloc = MemoryGameBloc(difficultyLevel: difficultyLevel, currentDate: currentDate)
@@ -40,6 +42,21 @@ struct MemoryGamePage: View {
                 .navigationTitle("Level: \(memoryGameBloc.difficultyLevel.description)")
             }
         )
+        .alert(isPresented: $memoryGameBloc.showAlert) {
+            switch memoryGameBloc.showAlertType {
+            case .gameWon:
+                return Alert(
+                    title: Text("Game Won!"),
+                    message: Text("You have successfully won the game, congrats!!!"),
+                    dismissButton: Alert.Button.default(
+                        Text("Ok"),
+                        action: {
+                            presentation.wrappedValue.dismiss()
+                        }
+                    )
+                )
+            }
+        }
         .detectOrientation($orientation) {
             updateChanges()
         }

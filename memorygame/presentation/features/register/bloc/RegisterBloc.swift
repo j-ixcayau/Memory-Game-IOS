@@ -6,9 +6,6 @@
 //
 
 import Foundation
-import Firebase
-import FirebaseCore
-import FirebaseAuth
 
 class RegisterBloc: ObservableObject {
     
@@ -19,8 +16,8 @@ class RegisterBloc: ObservableObject {
     @Published var showAlert: Bool = false
     var showAlertType: RegisterAlertType = RegisterAlertType.invalidCredentials
     
-    private let firebaseAuth = Auth.auth()
     private let stringValidator = StringValidator()
+    private let repository = AuthRepositoryImpl()
     
     func onRegisterTap(){
         let email = emailController.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -50,28 +47,11 @@ class RegisterBloc: ObservableObject {
     }
     
     private func performRegister(_ email: String, _ password: String){
-        firebaseAuth.createUser(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                let errorCode = (error as NSError).code
-                var errorMesssage: String = ""
-                
-                switch errorCode {
-                case AuthErrorCode.emailAlreadyInUse.rawValue:
-                    errorMesssage = "The email address is already in use"
-                default:
-                    errorMesssage = "Other error occurred: \(error.localizedDescription)"
-                }
-                
-                self.showAlertType = .registerError(errorMesssage)
-                self.showAlert = true
-                
-                return
-            }
-            
-            
-            if let user = authResult?.user {
-                print("User logged in \(user.uid)")
-            }
+        repository.register(email, password) { uid in
+            print("User logged in \(uid)")
+        } onError: { error in
+            self.showAlertType = .registerError(error)
+            self.showAlert = true
         }
     }
 }

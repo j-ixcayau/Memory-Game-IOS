@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E819B631C7B89DC4731FBB7 /* Pods_memorygame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2783F7803F838FD3AB485D /* Pods_memorygame.framework */; };
 		750C29A929F25004006CED66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750C29A829F25004006CED66 /* GoogleService-Info.plist */; };
-		750C29AC29F250A4006CED66 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AB29F250A4006CED66 /* FirebaseAnalytics */; };
-		750C29AE29F250A4006CED66 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AD29F250A4006CED66 /* FirebaseAuth */; };
-		750C29B029F250A4006CED66 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29AF29F250A4006CED66 /* FirebaseCrashlytics */; };
-		750C29B229F250A4006CED66 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 750C29B129F250A4006CED66 /* FirebaseFirestore */; };
 		750C29B829F25615006CED66 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29B729F25615006CED66 /* LoginPage.swift */; };
 		750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BC29F25DA8006CED66 /* RootPage.swift */; };
 		750C29BF29F26584006CED66 /* RootBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BE29F26584006CED66 /* RootBloc.swift */; };
@@ -21,10 +18,12 @@
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
 		7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */; };
 		754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A464729E50F5700F7DADB /* MemoryGameBloc.swift */; };
+		75A3FE3E2A1099B100039E94 /* GuessWordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3FE3D2A1099B100039E94 /* GuessWordRepository.swift */; };
+		75A3FE412A109A1F00039E94 /* GameWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3FE402A109A1F00039E94 /* GameWin.swift */; };
 		75BB879D2A04BA7F00497ACA /* StringValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB879C2A04BA7F00497ACA /* StringValidations.swift */; };
-		75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */; };
-		75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */; };
-		75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D029E0FE7300AC18C9 /* guessWord.swift */; };
+		75BCC9CB29E0EA7F00AC18C9 /* DifficultyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CA29E0EA7F00AC18C9 /* DifficultyLevel.swift */; };
+		75BCC9CE29E0F1BD00AC18C9 /* DetectOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9CD29E0F1BD00AC18C9 /* DetectOrientation.swift */; };
+		75BCC9D129E0FE7300AC18C9 /* GuessWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D029E0FE7300AC18C9 /* GuessWord.swift */; };
 		75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */; };
 		75BE308829F63C3900B5A1E8 /* LoginBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE308729F63C3900B5A1E8 /* LoginBloc.swift */; };
 		75BE308B29F6454A00B5A1E8 /* CommonInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BE308A29F6454A00B5A1E8 /* CommonInput.swift */; };
@@ -38,9 +37,11 @@
 		75CAA5442A08BAAB00580E2C /* RegisterBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5432A08BAAB00580E2C /* RegisterBloc.swift */; };
 		75CAA5462A08BC0A00580E2C /* RegisterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5452A08BC0A00580E2C /* RegisterPage.swift */; };
 		75CAA5482A08C8B600580E2C /* RegisterAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CAA5472A08C8B600580E2C /* RegisterAlerts.swift */; };
+		75CFC03E2A1C2F64006BBCC5 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFC03D2A1C2F64006BBCC5 /* AuthRepository.swift */; };
 		75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD729FAEE0F00321D37 /* CommonButtons.swift */; };
 		75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D25DD929FAF0AE00321D37 /* CommonBackground.swift */; };
 		75F517C929F7A01E000C197E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F517C829F7A01E000C197E /* LoadingView.swift */; };
+		75FAD3892A1C6FE500716D9C /* MemoryGameAlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FAD3882A1C6FE500716D9C /* MemoryGameAlertType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +55,12 @@
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
 		7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseWidget.swift; sourceTree = "<group>"; };
 		754A464729E50F5700F7DADB /* MemoryGameBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameBloc.swift; sourceTree = "<group>"; };
+		75A3FE3D2A1099B100039E94 /* GuessWordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWordRepository.swift; sourceTree = "<group>"; };
+		75A3FE402A109A1F00039E94 /* GameWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWin.swift; sourceTree = "<group>"; };
 		75BB879C2A04BA7F00497ACA /* StringValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidations.swift; sourceTree = "<group>"; };
-		75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = difficultyLevel.swift; sourceTree = "<group>"; };
-		75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detectOrientation.swift; sourceTree = "<group>"; };
-		75BCC9D029E0FE7300AC18C9 /* guessWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWord.swift; sourceTree = "<group>"; };
+		75BCC9CA29E0EA7F00AC18C9 /* DifficultyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyLevel.swift; sourceTree = "<group>"; };
+		75BCC9CD29E0F1BD00AC18C9 /* DetectOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectOrientation.swift; sourceTree = "<group>"; };
+		75BCC9D029E0FE7300AC18C9 /* GuessWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWord.swift; sourceTree = "<group>"; };
 		75BCC9D229E0FFC900AC18C9 /* WordsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsManager.swift; sourceTree = "<group>"; };
 		75BE308729F63C3900B5A1E8 /* LoginBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBloc.swift; sourceTree = "<group>"; };
 		75BE308A29F6454A00B5A1E8 /* CommonInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonInput.swift; sourceTree = "<group>"; };
@@ -73,9 +76,14 @@
 		75CAA5432A08BAAB00580E2C /* RegisterBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterBloc.swift; sourceTree = "<group>"; };
 		75CAA5452A08BC0A00580E2C /* RegisterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage.swift; sourceTree = "<group>"; };
 		75CAA5472A08C8B600580E2C /* RegisterAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAlerts.swift; sourceTree = "<group>"; };
+		75CFC03D2A1C2F64006BBCC5 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		75D25DD729FAEE0F00321D37 /* CommonButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButtons.swift; sourceTree = "<group>"; };
 		75D25DD929FAF0AE00321D37 /* CommonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBackground.swift; sourceTree = "<group>"; };
 		75F517C829F7A01E000C197E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		75FAD3882A1C6FE500716D9C /* MemoryGameAlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameAlertType.swift; sourceTree = "<group>"; };
+		7B2783F7803F838FD3AB485D /* Pods_memorygame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memorygame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79579E5D557F3F24FED7E57 /* Pods-memorygame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memorygame.release.xcconfig"; path = "Target Support Files/Pods-memorygame/Pods-memorygame.release.xcconfig"; sourceTree = "<group>"; };
+		F25060815FDE3DDD9472DDDD /* Pods-memorygame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memorygame.debug.xcconfig"; path = "Target Support Files/Pods-memorygame/Pods-memorygame.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +91,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				750C29B029F250A4006CED66 /* FirebaseCrashlytics in Frameworks */,
-				750C29B229F250A4006CED66 /* FirebaseFirestore in Frameworks */,
-				750C29AC29F250A4006CED66 /* FirebaseAnalytics in Frameworks */,
-				750C29AE29F250A4006CED66 /* FirebaseAuth in Frameworks */,
+				1E819B631C7B89DC4731FBB7 /* Pods_memorygame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22832DBFB9A7918496E14237 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B2783F7803F838FD3AB485D /* Pods_memorygame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		750C29B329F255E2006CED66 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,10 +200,27 @@
 			path = bloc;
 			sourceTree = "<group>";
 		};
+		75A3FE3C2A1098C600039E94 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				75A3FE3D2A1099B100039E94 /* GuessWordRepository.swift */,
+				75CFC03D2A1C2F64006BBCC5 /* AuthRepository.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		75A3FE3F2A1099DD00039E94 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				75A3FE402A109A1F00039E94 /* GameWin.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		75BCC9C929E0EA5B00AC18C9 /* enums */ = {
 			isa = PBXGroup;
 			children = (
-				75BCC9CA29E0EA7F00AC18C9 /* difficultyLevel.swift */,
+				75BCC9CA29E0EA7F00AC18C9 /* DifficultyLevel.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -198,7 +228,7 @@
 		75BCC9CC29E0F18800AC18C9 /* modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				75BCC9CD29E0F1BD00AC18C9 /* detectOrientation.swift */,
+				75BCC9CD29E0F1BD00AC18C9 /* DetectOrientation.swift */,
 				75D25DD929FAF0AE00321D37 /* CommonBackground.swift */,
 			);
 			path = modifiers;
@@ -207,7 +237,7 @@
 		75BCC9CF29E0FE5C00AC18C9 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				75BCC9D029E0FE7300AC18C9 /* guessWord.swift */,
+				75BCC9D029E0FE7300AC18C9 /* GuessWord.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -217,6 +247,8 @@
 			children = (
 				75C45BA329DE63C600B3C221 /* memorygame */,
 				75C45BA229DE63C600B3C221 /* Products */,
+				F61A9B15400C77412D819DB6 /* Pods */,
+				22832DBFB9A7918496E14237 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +298,7 @@
 		75C45BB429DE6B4D00B3C221 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				75A3FE3C2A1098C600039E94 /* repositories */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -273,6 +306,7 @@
 		75C45BB529DE6B5400B3C221 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				75A3FE3F2A1099DD00039E94 /* model */,
 				75BCC9C929E0EA5B00AC18C9 /* enums */,
 			);
 			path = domain;
@@ -325,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				75C45BBD29DE6C9700B3C221 /* MemoryGamePage.swift */,
+				75FAD3882A1C6FE500716D9C /* MemoryGameAlertType.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -387,6 +422,15 @@
 			path = widgets;
 			sourceTree = "<group>";
 		};
+		F61A9B15400C77412D819DB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F25060815FDE3DDD9472DDDD /* Pods-memorygame.debug.xcconfig */,
+				B79579E5D557F3F24FED7E57 /* Pods-memorygame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,21 +438,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75C45BB029DE63C700B3C221 /* Build configuration list for PBXNativeTarget "memorygame" */;
 			buildPhases = (
+				81C7BC4BCDB760397ADBF169 /* [CP] Check Pods Manifest.lock */,
 				75C45B9D29DE63C600B3C221 /* Sources */,
 				75C45B9E29DE63C600B3C221 /* Frameworks */,
 				75C45B9F29DE63C600B3C221 /* Resources */,
+				1A1B897210C0120C8F4F451F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = memorygame;
-			packageProductDependencies = (
-				750C29AB29F250A4006CED66 /* FirebaseAnalytics */,
-				750C29AD29F250A4006CED66 /* FirebaseAuth */,
-				750C29AF29F250A4006CED66 /* FirebaseCrashlytics */,
-				750C29B129F250A4006CED66 /* FirebaseFirestore */,
-			);
 			productName = memorygame;
 			productReference = 75C45BA129DE63C600B3C221 /* memorygame.app */;
 			productType = "com.apple.product-type.application";
@@ -437,9 +477,6 @@
 				Base,
 			);
 			mainGroup = 75C45B9829DE63C600B3C221;
-			packageReferences = (
-				750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 75C45BA229DE63C600B3C221 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -462,6 +499,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A1B897210C0120C8F4F451F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memorygame/Pods-memorygame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-memorygame/Pods-memorygame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-memorygame/Pods-memorygame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C7BC4BCDB760397ADBF169 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-memorygame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75C45B9D29DE63C600B3C221 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -470,6 +549,7 @@
 				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
 				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
 				75CAA5442A08BAAB00580E2C /* RegisterBloc.swift in Sources */,
+				75CFC03E2A1C2F64006BBCC5 /* AuthRepository.swift in Sources */,
 				75D25DD829FAEE0F00321D37 /* CommonButtons.swift in Sources */,
 				75C45BC029DE7E3400B3C221 /* BaseScreen.swift in Sources */,
 				75CAA5462A08BC0A00580E2C /* RegisterPage.swift in Sources */,
@@ -482,9 +562,10 @@
 				75CAA5482A08C8B600580E2C /* RegisterAlerts.swift in Sources */,
 				75BE308829F63C3900B5A1E8 /* LoginBloc.swift in Sources */,
 				7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */,
+				75FAD3892A1C6FE500716D9C /* MemoryGameAlertType.swift in Sources */,
 				75D25DDA29FAF0AE00321D37 /* CommonBackground.swift in Sources */,
-				75BCC9D129E0FE7300AC18C9 /* guessWord.swift in Sources */,
-				75BCC9CE29E0F1BD00AC18C9 /* detectOrientation.swift in Sources */,
+				75BCC9D129E0FE7300AC18C9 /* GuessWord.swift in Sources */,
+				75BCC9CE29E0F1BD00AC18C9 /* DetectOrientation.swift in Sources */,
 				7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */,
 				75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */,
 				7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */,
@@ -492,8 +573,10 @@
 				750C29B829F25615006CED66 /* LoginPage.swift in Sources */,
 				75CAA53E2A08A17200580E2C /* PasswordInput.swift in Sources */,
 				75F517C929F7A01E000C197E /* LoadingView.swift in Sources */,
-				75BCC9CB29E0EA7F00AC18C9 /* difficultyLevel.swift in Sources */,
+				75BCC9CB29E0EA7F00AC18C9 /* DifficultyLevel.swift in Sources */,
+				75A3FE412A109A1F00039E94 /* GameWin.swift in Sources */,
 				75BB879D2A04BA7F00497ACA /* StringValidations.swift in Sources */,
+				75A3FE3E2A1099B100039E94 /* GuessWordRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +633,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -602,6 +687,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -611,6 +698,7 @@
 		};
 		75C45BB129DE63C700B3C221 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25060815FDE3DDD9472DDDD /* Pods-memorygame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -642,7 +730,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,6 +741,7 @@
 		};
 		75C45BB229DE63C700B3C221 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B79579E5D557F3F24FED7E57 /* Pods-memorygame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -682,7 +773,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jixcayau.memorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,7 +792,7 @@
 				75C45BAF29DE63C700B3C221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		75C45BB029DE63C700B3C221 /* Build configuration list for PBXNativeTarget "memorygame" */ = {
 			isa = XCConfigurationList;
@@ -708,43 +801,9 @@
 				75C45BB229DE63C700B3C221 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		750C29AB29F250A4006CED66 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		750C29AD29F250A4006CED66 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		750C29AF29F250A4006CED66 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		750C29B129F250A4006CED66 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 750C29AA29F250A4006CED66 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75C45B9929DE63C600B3C221 /* Project object */;
 }

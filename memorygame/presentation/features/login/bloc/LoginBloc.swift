@@ -6,9 +6,6 @@
 //
 
 import Foundation
-import Firebase
-import FirebaseCore
-import FirebaseAuth
 
 class LoginBloc: ObservableObject {
     
@@ -18,8 +15,8 @@ class LoginBloc: ObservableObject {
     @Published var showAlert: Bool = false
     var showAlertType: LoginAlertType = LoginAlertType.invalidCredentials
     
-    private let firebaseAuth = Auth.auth()
     private let stringValidator = StringValidator()
+    private let repository = AuthRepositoryImpl()
     
     func onLoginTap(){
         let email = emailController.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -44,32 +41,12 @@ class LoginBloc: ObservableObject {
     
     
     private func performLogin(_ email: String, _ password: String){
-        firebaseAuth.signIn(withEmail: email, password: password) { authResult, error in
-            if let error = error {
-                let errorCode = (error as NSError).code
-                var errorMessage: String = ""
-                
-                switch errorCode {
-                case AuthErrorCode.wrongPassword.rawValue:
-                    errorMessage = "Wrong password"
-                case AuthErrorCode.userNotFound.rawValue:
-                    errorMessage = "User not found"
-                case AuthErrorCode.networkError.rawValue:
-                    errorMessage = "Network error"
-                default:
-                    errorMessage = "Other error occurred: \(error.localizedDescription)"
-                }
-                
-                self.showAlertType = .registerError(errorMessage)
-                self.showAlert = true
-                
-                return
-            }
-            
-            
-            if let user = authResult?.user {
-                print("User logged in \(user.uid)")
-            }
+        
+        repository.login(email, password) { uid in
+            print("User logged in \(uid)")
+        } onError: { error in
+            self.showAlertType = .registerError(error)
+            self.showAlert = true
         }
     }
 }
