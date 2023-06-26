@@ -6,19 +6,16 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 class LevelChooseBloc: ObservableObject {
     @Published var difficultyLevel: DifficultyLevel = .Easy
-    @Published var isNavigationActive: Bool = false
     
-    private let firebaseAuth = Auth.auth()
+    @Published var isNavigationToGameActive: Bool = false
+    @Published var isNavigationToListActive: Bool = false
     
-    func logout(){
-        do {
-            try firebaseAuth.signOut()
-        } catch {
-            print("Unexpected error: \(error).")
-        }
+    private let repository = AuthRepositoryImpl()
+    
+    func logout() {
+        repository.signout()
     }
 }

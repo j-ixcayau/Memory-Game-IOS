@@ -13,6 +13,8 @@ protocol AuthRepository {
     func addStateDidChangeListener(onChanged: @escaping (Bool) -> Void)
     func register(_ email: String, _ password: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void)
     func login(_ email: String, _ password: String, onSuccess: @escaping (String) -> Void, onError: @escaping (String) -> Void)
+    func signout()
+    func getUserId() -> String?
 }
 
 class AuthRepositoryImpl: AuthRepository {
@@ -76,5 +78,17 @@ class AuthRepositoryImpl: AuthRepository {
                 onSuccess(user.uid)
             }
         }
+    }
+    
+    func signout()  {
+        do {
+            try firebaseAuth.signOut()
+        } catch {
+            
+        }
+    }
+    
+    func getUserId() -> String? {
+        return Auth.auth().currentUser?.uid
     }
 }

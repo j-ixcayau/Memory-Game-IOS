@@ -9,15 +9,15 @@ import Foundation
 import FirebaseFirestore
 
 protocol GuessWordRepository {
-    func getWinnedGames(_ uid: String, completion: @escaping ([GameWin]) -> Void)
-    func saveGameWinned(game: GameWin, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
+    func getWonGames(_ uid: String, onSuccess: @escaping ([GameWin]) -> Void)
+    func saveWonGame(game: GameWin, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void)
 }
 
 
 class GuessWordRepositoryImpl: GuessWordRepository {
     private let databaseReference = Firestore.firestore().collection("gameWin")
     
-    func saveGameWinned(game: GameWin, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
+    func saveWonGame(game: GameWin, onSuccess: @escaping () -> Void, onError: @escaping (Error) -> Void) {
         do {
             try databaseReference.addDocument(data: game.toJsonFb())
             onSuccess()
@@ -26,7 +26,21 @@ class GuessWordRepositoryImpl: GuessWordRepository {
         }
     }
     
-    func getWinnedGames(_ uid: String, completion: @escaping ([GameWin]) -> Void) {
-        
+    func getWonGames(_ uid: String, onSuccess: @escaping ([GameWin]) -> Void) {
+        databaseReference.whereField("userId", isEqualTo: uid).getDocuments { docs, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            var list: [GameWin] = []
+            
+            docs?.documents.forEach({ doc in
+                let game = GameWin(id: doc.documentID, info: doc.data())
+                list.append(game)
+            })
+            
+            onSuccess(list)
+        }
     }
 }

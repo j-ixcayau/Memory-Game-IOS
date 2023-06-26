@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
 
 class MemoryGameBloc: ObservableObject {
     
@@ -23,6 +22,9 @@ class MemoryGameBloc: ObservableObject {
     
     @Published var showAlert: Bool = false
     var showAlertType: MemoryGameAlertType = MemoryGameAlertType.gameWon
+    
+    private let gameRepository = GuessWordRepositoryImpl()
+    private let authRepository = AuthRepositoryImpl()
     
     init(difficultyLevel: DifficultyLevel, currentDate: Date){
         self.difficultyLevel = difficultyLevel
@@ -91,9 +93,9 @@ class MemoryGameBloc: ObservableObject {
     }
     
     private func onGameWinned(){
-        let userId = Auth.auth().currentUser?.uid ?? ""
+        let userId = authRepository.getUserId() ?? ""
         
-        let secondsExpended = currentDate.distance(to: Date.now)
+        let secondsExpended = currentDate.timeIntervalSinceNow
         
         let gameWin = GameWin(
             attemptsError: attempErrorsCounter,
@@ -103,7 +105,7 @@ class MemoryGameBloc: ObservableObject {
             userId: userId
         )
         
-        GuessWordRepositoryImpl().saveGameWinned(game: gameWin) {
+        gameRepository.saveWonGame(game: gameWin) {
             self.showAlert = true
             self.showAlertType = .gameWon
         } onError: { error in
