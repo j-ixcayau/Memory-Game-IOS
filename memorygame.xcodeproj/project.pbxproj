@@ -13,11 +13,14 @@
 		750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BC29F25DA8006CED66 /* RootPage.swift */; };
 		750C29BF29F26584006CED66 /* RootBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750C29BE29F26584006CED66 /* RootBloc.swift */; };
 		751181AC2A0B545300BDC4B2 /* LoginAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751181AB2A0B545300BDC4B2 /* LoginAlerts.swift */; };
+		7511BC232A1C834800D5A9C6 /* ListWonGamesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511BC222A1C834800D5A9C6 /* ListWonGamesPage.swift */; };
 		751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F65DF29ED190B0095FFAC /* OnViewTap.swift */; };
+		7521D3B02A20683F0063A0A7 /* GameWonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521D3AF2A20683F0063A0A7 /* GameWonItem.swift */; };
 		7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763429E66B31006AEB5C /* LevelChooseBloc.swift */; };
 		7540763729E66B48006AEB5C /* LevelChoosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763629E66B48006AEB5C /* LevelChoosePage.swift */; };
 		7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */; };
 		754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754A464729E50F5700F7DADB /* MemoryGameBloc.swift */; };
+		755E24A02A1DD5C700237A9A /* ListWonGamesBloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755E249F2A1DD5C700237A9A /* ListWonGamesBloc.swift */; };
 		75A3FE3E2A1099B100039E94 /* GuessWordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3FE3D2A1099B100039E94 /* GuessWordRepository.swift */; };
 		75A3FE412A109A1F00039E94 /* GameWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A3FE402A109A1F00039E94 /* GameWin.swift */; };
 		75BB879D2A04BA7F00497ACA /* StringValidations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BB879C2A04BA7F00497ACA /* StringValidations.swift */; };
@@ -50,11 +53,14 @@
 		750C29BC29F25DA8006CED66 /* RootPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPage.swift; sourceTree = "<group>"; };
 		750C29BE29F26584006CED66 /* RootBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBloc.swift; sourceTree = "<group>"; };
 		751181AB2A0B545300BDC4B2 /* LoginAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlerts.swift; sourceTree = "<group>"; };
+		7511BC222A1C834800D5A9C6 /* ListWonGamesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWonGamesPage.swift; sourceTree = "<group>"; };
 		751F65DF29ED190B0095FFAC /* OnViewTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnViewTap.swift; sourceTree = "<group>"; };
+		7521D3AF2A20683F0063A0A7 /* GameWonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWonItem.swift; sourceTree = "<group>"; };
 		7540763429E66B31006AEB5C /* LevelChooseBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseBloc.swift; sourceTree = "<group>"; };
 		7540763629E66B48006AEB5C /* LevelChoosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChoosePage.swift; sourceTree = "<group>"; };
 		7540763829E66CEF006AEB5C /* LevelChooseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooseWidget.swift; sourceTree = "<group>"; };
 		754A464729E50F5700F7DADB /* MemoryGameBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameBloc.swift; sourceTree = "<group>"; };
+		755E249F2A1DD5C700237A9A /* ListWonGamesBloc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWonGamesBloc.swift; sourceTree = "<group>"; };
 		75A3FE3D2A1099B100039E94 /* GuessWordRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWordRepository.swift; sourceTree = "<group>"; };
 		75A3FE402A109A1F00039E94 /* GameWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWin.swift; sourceTree = "<group>"; };
 		75BB879C2A04BA7F00497ACA /* StringValidations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidations.swift; sourceTree = "<group>"; };
@@ -162,6 +168,40 @@
 			isa = PBXGroup;
 			children = (
 				750C29BE29F26584006CED66 /* RootBloc.swift */,
+			);
+			path = bloc;
+			sourceTree = "<group>";
+		};
+		7511BC1E2A1C824A00D5A9C6 /* list_won_games */ = {
+			isa = PBXGroup;
+			children = (
+				7511BC212A1C827A00D5A9C6 /* bloc */,
+				7511BC202A1C827300D5A9C6 /* ui */,
+				7511BC1F2A1C826E00D5A9C6 /* widgets */,
+			);
+			path = list_won_games;
+			sourceTree = "<group>";
+		};
+		7511BC1F2A1C826E00D5A9C6 /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				7521D3AF2A20683F0063A0A7 /* GameWonItem.swift */,
+			);
+			path = widgets;
+			sourceTree = "<group>";
+		};
+		7511BC202A1C827300D5A9C6 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				7511BC222A1C834800D5A9C6 /* ListWonGamesPage.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		7511BC212A1C827A00D5A9C6 /* bloc */ = {
+			isa = PBXGroup;
+			children = (
+				755E249F2A1DD5C700237A9A /* ListWonGamesBloc.swift */,
 			);
 			path = bloc;
 			sourceTree = "<group>";
@@ -315,6 +355,7 @@
 		75C45BB629DE6B5E00B3C221 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				7511BC1E2A1C824A00D5A9C6 /* list_won_games */,
 				750C29B929F25CAE006CED66 /* root */,
 				75CAA53F2A08BA7100580E2C /* register */,
 				750C29B329F255E2006CED66 /* login */,
@@ -547,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C45BBE29DE6C9700B3C221 /* MemoryGamePage.swift in Sources */,
+				7521D3B02A20683F0063A0A7 /* GameWonItem.swift in Sources */,
 				754A464829E50F5700F7DADB /* MemoryGameBloc.swift in Sources */,
 				75CAA5442A08BAAB00580E2C /* RegisterBloc.swift in Sources */,
 				75CFC03E2A1C2F64006BBCC5 /* AuthRepository.swift in Sources */,
@@ -556,6 +598,7 @@
 				75C45BA529DE63C600B3C221 /* memorygameApp.swift in Sources */,
 				751F65E029ED190B0095FFAC /* OnViewTap.swift in Sources */,
 				750C29BD29F25DA8006CED66 /* RootPage.swift in Sources */,
+				7511BC232A1C834800D5A9C6 /* ListWonGamesPage.swift in Sources */,
 				751181AC2A0B545300BDC4B2 /* LoginAlerts.swift in Sources */,
 				75C45BC429DE894700B3C221 /* MemoryCard.swift in Sources */,
 				75BE308B29F6454A00B5A1E8 /* CommonInput.swift in Sources */,
@@ -569,6 +612,7 @@
 				7540763929E66CEF006AEB5C /* LevelChooseWidget.swift in Sources */,
 				75BCC9D329E0FFC900AC18C9 /* WordsManager.swift in Sources */,
 				7540763529E66B31006AEB5C /* LevelChooseBloc.swift in Sources */,
+				755E24A02A1DD5C700237A9A /* ListWonGamesBloc.swift in Sources */,
 				750C29BF29F26584006CED66 /* RootBloc.swift in Sources */,
 				750C29B829F25615006CED66 /* LoginPage.swift in Sources */,
 				75CAA53E2A08A17200580E2C /* PasswordInput.swift in Sources */,
@@ -616,6 +660,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -676,6 +721,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -706,6 +752,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"memorygame/Preview Content\"";
 				DEVELOPMENT_TEAM = DKHCJ29L6U;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -749,6 +796,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"memorygame/Preview Content\"";
 				DEVELOPMENT_TEAM = DKHCJ29L6U;
 				ENABLE_HARDENED_RUNTIME = YES;

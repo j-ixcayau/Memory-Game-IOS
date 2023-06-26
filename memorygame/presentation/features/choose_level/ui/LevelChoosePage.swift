@@ -25,6 +25,15 @@ struct LevelChoosePage: View {
                 
                 Spacer()
                 
+                SecondaryButton(
+                    title: "List won games",
+                    action: {
+                        levelChooseBloc.isNavigationToListActive.toggle()
+                    }
+                )
+                
+                Spacer()
+                
                 CommonButtons(
                     title: "Logout",
                     action: {
@@ -36,11 +45,17 @@ struct LevelChoosePage: View {
             .navigationTitle("Choose a level")
             .commonBackground()
             .navigationDestination(
-                isPresented: $levelChooseBloc.isNavigationActive,
+                isPresented: $levelChooseBloc.isNavigationToGameActive,
                 destination: {
                     MemoryGamePage(
                         difficultyLevel: levelChooseBloc.difficultyLevel
                     )
+                }
+            )
+            .navigationDestination(
+                isPresented: $levelChooseBloc.isNavigationToListActive,
+                destination: {
+                    ListWonGamesPage()
                 }
             )
         }
@@ -48,7 +63,7 @@ struct LevelChoosePage: View {
     
     func onDifficultyTap(difficultyLevel: DifficultyLevel){
         levelChooseBloc.difficultyLevel = difficultyLevel
-        levelChooseBloc.isNavigationActive.toggle()
+        levelChooseBloc.isNavigationToGameActive.toggle()
     }
 }
 

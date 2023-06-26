@@ -19,4 +19,14 @@ enum DifficultyLevel: CustomStringConvertible, CaseIterable {
         case .Hard: return "Hard"
         }
     }
+    
+    static func fromString(_ value: String) -> DifficultyLevel {
+        for level in DifficultyLevel.allCases {
+            if level.description == value {
+                return level
+            }
+        }
+        
+        return DifficultyLevel.Easy
+    }
 }
