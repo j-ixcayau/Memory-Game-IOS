@@ -13,33 +13,35 @@ struct LoginPage: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                CommonInput(
-                    content: $loginBloc.emailController,
-                    title: "Email",
-                    hint: "abcd@gmail.com",
-                    keyboardType: UIKeyboardType.emailAddress
-                )
-                
-                PasswordInput(
-                    content: $loginBloc.passwordController,
-                    title: "Password",
-                    hint: "Abcd123$"
-                )
-                .padding(.bottom, 50)
-                
-                CommonButtons(
-                    title: "Login",
-                    action: {
-                        loginBloc.onLoginTap()
+            VScrollView {
+                VStack{
+                    CommonInput(
+                        content: $loginBloc.emailController,
+                        title: "Email",
+                        hint: "abcd@gmail.com",
+                        keyboardType: UIKeyboardType.emailAddress
+                    )
+                    
+                    PasswordInput(
+                        content: $loginBloc.passwordController,
+                        title: "Password",
+                        hint: "********"
+                    )
+                    .padding(.bottom, 50)
+                    
+                    CommonButtons(
+                        title: "Login",
+                        action: {
+                            loginBloc.onLoginTap()
+                        }
+                    )
+                    .padding(.bottom, 50)
+                    
+                    NavigationLink {
+                        RegisterPage()
+                    } label: {
+                        Text("Register")
                     }
-                )
-                .padding(.bottom, 50)
-                
-                NavigationLink {
-                    RegisterPage()
-                } label: {
-                    Text("Register")
                 }
             }
             .padding()
@@ -70,3 +72,19 @@ struct LoginPage_Previews: PreviewProvider {
         LoginPage()
     }
 }
+
+
+struct VScrollView<Content>: View where Content: View {
+  @ViewBuilder let content: Content
+  
+  var body: some View {
+    GeometryReader { geometry in
+      ScrollView(.vertical) {
+        content
+          .frame(width: geometry.size.width)
+          .frame(minHeight: geometry.size.height)
+      }
+    }
+  }
+}
+
